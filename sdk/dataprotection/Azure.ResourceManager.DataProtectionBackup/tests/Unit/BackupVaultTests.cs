@@ -9,6 +9,14 @@ namespace Azure.ResourceManager.DataProtectionBackup.Tests.Unit
 {
     public class BackupVaultTests
     {
+        [Test]
+        public void BackupVaultSecuritySettingsCompatibilityOverloadAcceptsNulls()
+        {
+            BackupVaultSecuritySettings settings = ArmDataProtectionBackupModelFactory.BackupVaultSecuritySettings(null, null, null);
+
+            Assert.IsNotNull(settings);
+        }
+
         [TestCase]
         public void ValidateDataSourceInfo()
         {

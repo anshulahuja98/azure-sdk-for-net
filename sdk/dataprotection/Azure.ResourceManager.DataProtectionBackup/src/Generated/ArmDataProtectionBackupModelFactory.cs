@@ -507,16 +507,6 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 default);
         }
 
-        /// <summary> Class containing security settings of vault. </summary>
-        /// <param name="softDeleteSettings"> Soft delete related settings. </param>
-        /// <param name="immutabilitySettings"> Immutability Settings at vault level. </param>
-        /// <param name="encryptionSettings"> Customer Managed Key details of the resource. </param>
-        /// <returns> A new <see cref="Models.BackupVaultSecuritySettings"/> instance for mocking. </returns>
-        public static BackupVaultSecuritySettings BackupVaultSecuritySettings(BackupVaultSoftDeleteSettings softDeleteSettings, ImmutabilitySettings immutabilitySettings, BackupVaultEncryptionSettings encryptionSettings)
-        {
-            return new BackupVaultSecuritySettings(softDeleteSettings, immutabilitySettings, encryptionSettings, default);
-        }
-
         /// <summary> Soft delete related settings. </summary>
         /// <param name="state"> State of soft delete. </param>
         /// <param name="retentionDurationInDays"> Soft delete retention duration. </param>
